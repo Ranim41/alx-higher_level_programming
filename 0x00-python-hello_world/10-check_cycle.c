@@ -17,7 +17,7 @@ int check_cycle(listint_t *list)
 	while (atika && alaa && alaa->next)
 	{
 		atika = atika->next;
-		fast = fast->next->next;
+		alaa = alaa->next->next;
 		if (atika == alaa)
 			return (1);
 	}
