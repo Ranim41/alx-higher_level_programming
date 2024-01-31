@@ -1,5 +1,10 @@
 #!/usr/bin/python3
-max_integer = __import__('6-max_integer').max_integer
+Rectangle = __import__('6-rectangle').Rectangle
 
-print(max_integer([1, 2, 3, 4]))
-print(max_integer([1, 3, 4, 2]))
+my_rectangle_1 = Rectangle(2, 4)
+my_rectangle_2 = Rectangle(2, 4)
+print("{:d} instances of Rectangle".format(Rectangle.number_of_instances))
+del my_rectangle_1
+print("{:d} instances of Rectangle".format(Rectangle.number_of_instances))
+del my_rectangle_2
+print("{:d} instances of Rectangle".format(Rectangle.number_of_instances))
