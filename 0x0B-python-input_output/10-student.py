@@ -15,9 +15,7 @@ class Student:
         self.age = age
 
     def to_json(self, attrs=None):
-        """
-        json
-        """
+        """json"""
         obj = self.__dict__.copy()
         if type(attrs) is list:
 
