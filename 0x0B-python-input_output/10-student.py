@@ -10,7 +10,7 @@ class Student:
     """
 
     def __init__(self, first_name, last_name, age):
-        self.firs_name = first_name
+        self.first_name = first_name
         self.last_name = last_name
         self.age = age
 
@@ -20,6 +20,12 @@ class Student:
         if type(attrs) is list:
 
             for item in attrs:
+                if type(item) is not str:
+                    return obj
+
+            d_list = {}
+
+            for iatr in range(len(attrs)):
                 if type(item) is not str:
                     return obj
 
