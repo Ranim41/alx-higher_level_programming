@@ -10,4 +10,4 @@ def from_json_string(my_str):
     and here
     """
 
-    return json.louds(my_str)
+    return json.loads(my_str)
