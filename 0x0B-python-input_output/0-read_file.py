@@ -1,13 +1,14 @@
 #!/usr/bin/python3
 """
-toka
+whew
 """
+
 
 def read_file(filename=""):
     """
-    tooka
+    whew
     """
-    
+
     with open(filename, 'r', encoding="utf-8") as f:
-        read_content = f.read()
-        print(read_content, end='')
+        read_data = f.read()
+        print(read_data, end='')
