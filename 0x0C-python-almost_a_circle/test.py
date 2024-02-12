@@ -1,19 +1,28 @@
-import unittest
+#!/usr/bin/python3
 
 
-class MyTestCase(unittest.TestCase):
+import turtle
 
-    @unittest.skip("demonstrating skipping")
-    def test_nothing(self):
-        self.fail("shouldn't happen")
 
-    @unittest.skipIf(mylib.__version__ < (1, 3),
-                     "not supported in this library version")
-    def test_format(self):
-        # Tests that work for only a certain version of the library.
-        pass
 
-    @unittest.skipUnless(sys.platform.startswith("win"), "requires Windows")
-    def test_windows_support(self):
-        # windows specific testing code
-        pass
+# Create a screen for the turtle to draw on
+screen = turtle.Screen()
+
+# Create a turtle object
+t = turtle.Turtle()
+
+# Draw three squares
+for color in ["red", "green", "blue"]:
+    t.color(color)  # Set the color of the turtle
+    for _ in range(4):  # Repeat 4 times to draw each side of the square
+        t.forward(100)  # Move the turtle forward by 100 units
+        t.right(90)      # Turn the turtle right by 90 degrees
+    t.penup()  # Lift the pen up to prevent drawing while moving to the next position
+    t.forward(150)  # Move the turtle horizontally to prepare for the next square
+    t.pendown()  # Put the pen down to start drawing the next square
+
+# Hide the turtle
+t.hideturtle()
+
+# Keep the window open until the user clicks on it
+screen.mainloop()
